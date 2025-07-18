@@ -144,22 +144,18 @@ navigationLinks.forEach(link => {
   link.addEventListener("click", function () {
     const targetPage = this.textContent.trim().toLowerCase();
 
+    // Show/hide pages
     pages.forEach(page => {
-      if (page.dataset.page === targetPage) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
+      page.classList.toggle("active", page.dataset.page === targetPage);
     });
 
+    // Set active class on nav link
     navigationLinks.forEach(nav => {
-      if (nav === this) {
-        nav.classList.add("active");
-      } else {
-        nav.classList.remove("active");
-      }
+      nav.classList.toggle("active", nav === this);
     });
 
-    window.scrollTo(0, 0);
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
