@@ -140,22 +140,20 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navigationLinks.forEach(link => {
-  link.addEventListener("click", function () {
-    const targetPage = this.textContent.trim().toLowerCase();
 
-    // Show/hide pages
-    pages.forEach(page => {
-      page.classList.toggle("active", page.dataset.page === targetPage);
-    });
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
 
-    // Set active class on nav link
-    navigationLinks.forEach(nav => {
-      nav.classList.toggle("active", nav === this);
-    });
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
-
+}
