@@ -1,7 +1,5 @@
 :root {
 
-  
-
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
@@ -413,25 +411,18 @@ main {
 
 
 
-.mapbox {
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 380px;
-  border-radius: 18px;
-  overflow: hidden;
+  background: hsla(240, 1%, 17%, 0.75);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
-  margin-top: 20px;
-  margin-bottom: 30px;
-  position: relative;
+  border-radius: 12px 12px 0 0;
+  box-shadow: var(--shadow-2);
+  z-index: 5;
 }
-
-.mapbox iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-}
-
-/* Navigation Bar */
 
 .navbar-list {
   display: flex;
@@ -449,15 +440,9 @@ main {
 }
 
 .navbar-link:hover,
-.navbar-link:focus {
-  color: var(--light-gray-70);
-}
+.navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active {
-  color: var(--orange-yellow-crayola);
-}
-
-
+.navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
 
@@ -524,11 +509,11 @@ main {
 
 
 
-.friends { margin-bottom: 30px; }
+.testimonials { margin-bottom: 30px; }
 
-.friends-title { margin-bottom: 20px; }
+.testimonials-title { margin-bottom: 20px; }
 
-.friends-list {
+.testimonials-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -542,12 +527,12 @@ main {
   scroll-snap-type: inline mandatory;
 }
 
-.friends-item {
+.testimonials-item {
   min-width: 100%;
   scroll-snap-align: center;
 }
 
-.friends-avatar-box {
+.testimonials-avatar-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -557,9 +542,9 @@ main {
   box-shadow: var(--shadow-1);
 }
 
-.friends-item-title { margin-bottom: 7px; }
+.testimonials-item-title { margin-bottom: 7px; }
 
-.friends-text {
+.testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -570,6 +555,7 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 
 
 
@@ -616,7 +602,7 @@ main {
   pointer-events: all;
 }
 
-.friends-modal {
+.testimonials-modal {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
@@ -630,7 +616,7 @@ main {
   z-index: 2;
 }
 
-.modal-container.active .friends-modal {
+.modal-container.active .testimonials-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -781,6 +767,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
+
 
 .skills-title { margin-bottom: 20px; }
 
@@ -1066,34 +1054,21 @@ main {
 
 .mapbox {
   position: relative;
+  height: 250px;
   width: 100%;
-  max-width: 1200px;
-  height: 500px;
-  margin: 40px auto;
   border-radius: 16px;
-  overflow: hidden;
+  margin-bottom: 30px;
   border: 1px solid var(--jet);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-.mapbox:hover {
-  transform: scale(1.01);
-}
+.mapbox figure { height: 100%; }
 
 .mapbox iframe {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* Responsive behavior for smaller screens */
-@media (max-width: 768px) {
-  .mapbox {
-    height: 350px;
-    margin: 20px;
-    border-radius: 12px;
-  }
+  filter: grayscale(1) invert(1);
 }
 
 .contact-form { margin-bottom: 10px; }
@@ -1181,14 +1156,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+
+
 @media (min-width: 450px) {
 
-  
+
+
   .clients-item { min-width: calc(33.33% - 10px); }
 
 
 
-  
+ 
   .project-img,
   .blog-banner-box { height: auto; }
 
@@ -1199,9 +1178,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
 @media (min-width: 580px) {
 
   
+
   :root {
 
     
@@ -1244,6 +1225,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   
+
   main {
     margin-top: 60px;
     margin-bottom: 100px;
@@ -1252,6 +1234,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   
+
   .sidebar {
     max-height: 180px;
     margin-bottom: 30px;
@@ -1294,67 +1277,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   
-  .navbar {
-  border-radius: 20px 20px 0 0;
-  background-color: var(--eerie-black-2);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
 
-.navbar-list {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+  .navbar { border-radius: 20px 20px 0 0; }
 
-.navbar-link {
-  --fs-8: 14px;
-  font-size: var(--fs-8);
-  color: var(--white);
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
+  .navbar-list { gap: 20px; }
 
-.navbar-link:hover {
-  background-color: var(--orange-yellow-crayola);
-  color: var(--eerie-black-2);
-}
-
-/* === FEU Tech Google Maps Navbar Section === */
-.navbar.maps-navbar {
-  background-color: var(--onyx);
-  border-radius: 12px;
-  margin: 20px auto 0;
-  padding: 12px 24px;
-  max-width: 1200px;
-}
-
-.maps-navbar .navbar-link {
-  font-weight: 500;
-  color: var(--white);
-  padding: 6px 12px;
-}
-
-.maps-navbar .navbar-link:hover {
-  background-color: var(--orange-yellow-crayola);
-  color: var(--onyx);
-}
+  .navbar-link { --fs-8: 14px; }
 
 
 
+ 
 
-  
   .about .article-title { margin-bottom: 20px; }
 
   .about-text { margin-bottom: 40px; }
 
   
-
   .service-item {
     display: flex;
     justify-content: flex-start;
@@ -1372,9 +1310,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   
 
-  .friends-title { margin-bottom: 25px; }
+  .testimonials-title { margin-bottom: 25px; }
 
-  .friends-list {
+  .testimonials-list {
     gap: 30px;
     margin: 0 -30px;
     padding: 30px;
@@ -1386,19 +1324,19 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 25px;
   }
 
-  .friends-avatar-box {
+  .testimonials-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
   }
 
-  .friends-avatar-box img { width: 80px; }
+  .testimonials-avatar-box img { width: 80px; }
 
-  .friends-item-title {
+  .testimonials-item-title {
     margin-bottom: 10px;
     margin-left: 95px;
   }
 
-  .friends-text {
+  .testimonials-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
   }
@@ -1407,7 +1345,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .modal-container { padding: 20px; }
 
-  .friends-modal {
+  .testimonials-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -1435,7 +1373,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-
+  
 
   .clients-list {
     gap: 50px;
@@ -1475,69 +1413,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   
   .mapbox {
-  width: 100%;
-  height: 380px;
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 30px;
-  border: 1px solid var(--jet);
-  position: relative;
+    height: 380px;
+    border-radius: 18px;
+  }
+
+  .input-wrapper {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form-input { padding: 15px 20px; }
+
+  textarea.form-input { margin-bottom: 30px; }
+
+  .form-btn {
+    --fs-6: 16px;
+    padding: 16px 20px;
+  }
+
+  .form-btn ion-icon { font-size: 18px; }
+
 }
-
-.mapbox iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* Form Section Styles */
-
-.input-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.form-input {
-  padding: 15px 20px;
-  flex: 1 1 100%;
-  border-radius: 12px;
-  border: 1px solid var(--jet);
-  font-size: var(--fs-6);
-}
-
-textarea.form-input {
-  margin-bottom: 30px;
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-btn {
-  --fs-6: 16px;
-  padding: 16px 20px;
-  background-color: var(--orange-yellow-crayola);
-  color: var(--eerie-black-2);
-  font-size: var(--fs-6);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.form-btn:hover {
-  background-color: var(--white);
-  color: var(--onyx);
-}
-
-.form-btn ion-icon {
-  font-size: 18px;
-}
-
 
 
 
@@ -1546,14 +1442,14 @@ textarea.form-input {
 
 @media (min-width: 768px) {
 
- 
+  
   .sidebar, article { width: 700px; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
 
 
-  
+ 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -1561,14 +1457,14 @@ textarea.form-input {
 
 
 
-  
+ 
+
   .navbar-link { --fs-8: 15px; }
 
 
 
   
-
-  .friends-modal {
+  .testimonials-modal {
     gap: 35px;
     max-width: 680px;
   }
@@ -1607,7 +1503,7 @@ textarea.form-input {
 
 
 
- 
+  
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
   .form-btn {
@@ -1622,13 +1518,14 @@ textarea.form-input {
 
 
 
+
 @media (min-width: 1024px) {
 
   
+
   :root {
 
-    
-
+   
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
@@ -1637,8 +1534,7 @@ textarea.form-input {
 
 
 
-  
-
+ 
   .sidebar, article {
     width: 950px;
     box-shadow: var(--shadow-5);
@@ -1647,7 +1543,6 @@ textarea.form-input {
 
 
   
-
   main { margin-bottom: 60px; }
 
   .main-content {
@@ -1658,7 +1553,6 @@ textarea.form-input {
 
 
 
-  
 
   .navbar {
     position: absolute;
@@ -1682,17 +1576,16 @@ textarea.form-input {
 
 
   
-
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
-  
 
-  .friends-item { min-width: calc(50% - 15px); }
 
-  
+  .testimonials-item { min-width: calc(50% - 15px); }
+
+ 
 
   .clients-item { min-width: calc(25% - 38px); }
 
@@ -1703,8 +1596,7 @@ textarea.form-input {
 
 
 
- 
-
+  
   .blog-banner-box { height: 230px; }
 
 }
@@ -1714,11 +1606,9 @@ textarea.form-input {
 
 
 
-
 @media (min-width: 1250px) {
 
   
-
   body::-webkit-scrollbar { width: 20px; }
 
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
@@ -1738,7 +1628,6 @@ textarea.form-input {
 
 
   
-
   .sidebar, article { width: auto; }
 
   article { min-height: 100%; }
@@ -1763,7 +1652,7 @@ textarea.form-input {
 
 
 
-  
+
   .sidebar {
     position: sticky;
     top: 60px;
@@ -1814,9 +1703,7 @@ textarea.form-input {
 
 
 
-  
-  .timeline-text { max-width: 700px; }
 
-}
+  .timeline-text { max-width: 700px; }
 
 }
