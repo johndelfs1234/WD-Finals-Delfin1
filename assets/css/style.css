@@ -1283,11 +1283,57 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   
-  .navbar { border-radius: 20px 20px 0 0; }
+  .navbar {
+  border-radius: 20px 20px 0 0;
+  background-color: var(--eerie-black-2);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-  .navbar-list { gap: 20px; }
+.navbar-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
 
-  .navbar-link { --fs-8: 14px; }
+.navbar-link {
+  --fs-8: 14px;
+  font-size: var(--fs-8);
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: var(--orange-yellow-crayola);
+  color: var(--eerie-black-2);
+}
+
+/* === FEU Tech Google Maps Navbar Section === */
+.navbar.maps-navbar {
+  background-color: var(--onyx);
+  border-radius: 12px;
+  margin: 20px auto 0;
+  padding: 12px 24px;
+  max-width: 1200px;
+}
+
+.maps-navbar .navbar-link {
+  font-weight: 500;
+  color: var(--white);
+  padding: 6px 12px;
+}
+
+.maps-navbar .navbar-link:hover {
+  background-color: var(--orange-yellow-crayola);
+  color: var(--onyx);
+}
+
 
 
 
