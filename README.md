@@ -1,88 +1,102 @@
-<a name="readme-top"></a>
+# 💼 Delfin - Personal Portfolio Website
 
-<br/>
+Welcome to my personal portfolio website!  
+This project showcases **John Great H. Delfin**—a BSIT student at FEU Tech with a passion for **UI/UX Design**, **Web Development**, **Game Development**, and **Creative Media**.
 
-<div align="center">
-  <a href="https://github.com/yourusername">
-    <!-- Optional: Replace with your own logo -->
-    <img src="./assets/images/my-avatar.png" alt="Delfin Portfolio Logo" width="120" height="120">
-  </a>
-  <h3 align="center">Delfin - Personal Portfolio</h3>
-</div>
 
-<div align="center">
-  A modern and responsive personal portfolio site for showcasing web development skills, projects, and more.
-</div>
+## 📁 Project Structure
 
-<br/>
+📦 Delfin-portfolio/
+├── 📁 assets
+│ ├── 📁 css # Custom stylesheets (e.g., style.css)
+│ ├── 📁 js # JavaScript for scroll, interactivity
+│ ├── 📁 images # All image files used in the website
+├── 📄 index.html # Main HTML file for the portfolio
+└── 📄 README.md # Project documentation (this file)
 
-![](https://visit-counter.vercel.app/counter.png?page=yourusername/delfin-portfolio)
 
 ---
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#overview">Overview</a></li>
-    <li>
-      <a href="#key-components">Key Components</a>
-      <ul>
-        <li><a href="#structure">Structure</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#technology">Technology</a></li>
-      </ul>
-    </li>
-    <li><a href="#rules-practices-and-principles">Rules, Practices and Principles</a></li>
-    <li><a href="#resources">Resources</a></li>
-  </ol>
-</details>
+## 🎨 Features
+
+### 👤 About Me
+- Introduces **John Great H. Delfin**, a student and creative UI/UX designer from Manila.
+- Shares personal philosophy and mission in design and development.
+
+### 🧠 Skills
+- Web Design  
+- Graphic Design  
+- Branding  
+- Coding
+
+### 🎓 Education Timeline
+- Aurora A. Quezon Elementary School  
+- Adamson University (Junior and Senior High)
+
+### 🧑‍💼 Experience
+- Creative Director (2021–2023)  
+- Art Director (2024–2025)  
+- Web Designer (2025–2028)
+
+### 🎮 Hobbies Section
+- Includes long personal narratives on:
+  - 🏀 Basketball  
+  - 🏐 Volleyball  
+  - 🎾 Tennis  
+  - 🎮 Video Games:
+    - Roblox  
+    - Valorant  
+    - GTA V  
+    - Watch Dogs  
+    - Devil May Cry  
+    - NBA 2K14
+
+### 🖼️ Portfolio Filter
+- Project categories include:
+  - Web Design  
+  - Web Development  
+  - Applications
+
+### 📝 Blog Section
+- Personal blog entries focused on:
+  - UI/UX trends  
+  - Design conferences  
+  - Typography & spacing tips
+
+### 📍 Contact Page
+- Contact form with fields for name, email, and message.
+- Embedded Google Maps
+- Social links:
+  - [Facebook](https://www.facebook.com/share/1RhAQ69QsA/?mibextid=wwXIfr)  
+  - [Twitter](https://x.com/imnotjdddd?s=21)  
+  - [Instagram](https://www.instagram.com/html.jd_)
 
 ---
 
-## 🧠 Overview
+## 🔧 Technologies Used
 
-This project is a **multi-section HTML/CSS portfolio website** built for **John Great H. Delfin**, a creative director and UI/UX designer from Manila. The goal is to showcase personal skills, past projects, client testimonials, and contact information — all in one elegant and responsive layout.
-
----
-
-## 🧩 Key Components
-
-### 🏗️ Structure
-
-The site is divided into the following major sections:
-
-- **Sidebar Profile**: Name, title, avatar, and contact details  
-- **Navigation Menu**: Single-page navigation using buttons  
-- **Main Sections**:
-  - **About**: Bio and offered services
-  - **Resume**: Timeline of education and experience
-  - **Portfolio**: Gallery of projects with filtering
-  - **Blog**: Sample blog post entries
-  - **Contact**: Contact form and embedded Google Map
+- **HTML5**  
+- **CSS**  
+- **JavaScript**  
+- **Ionicons**   
+- **Google Fonts**  
+- **Responsive Design** 
 
 ---
 
-### ✨ Features
+## 🚀 Getting Started
 
-- Responsive layout  
-- Sidebar toggle for contact details  
-- Modal popup for testimonials  
-- Portfolio filtering by category  
-- Smooth interactions with icon sets  
-- Preloaded Google Fonts for consistent typography
+To run this project locally:
 
----
-
-### 💻 Technology
-
-![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JS-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
-![Ionicons](https://img.shields.io/badge/Ionicons-%23007AFF.svg?style=for-the-badge&logo=ionic&logoColor=white)
+1. Clone or download this repository  
+2. Open `index.html` in your browser  
+3. Make sure the folder structure matches the paths used in the HTML (`./assets/...`)
 
 ---
 
-## 📏 Rules, Practices and Principles
+## 🧑‍🎓 Author
 
-1. Use semantic HTML elements (`<nav>`, `<header>`, `<main>`, `<section>`, `<footer>`) for structure.  
-2. Organize project folders as follows:
+**John Great H. Delfin**  
+Student at FEU Tech  
+📧 delfinjohn901@gmail.com  
+📍 Manila, Philippines
